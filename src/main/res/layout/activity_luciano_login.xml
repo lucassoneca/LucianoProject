@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LucianoLogin">
+
+<View
+    android:id="@+id/containerComponents"
+    style="@style/ContainerComponents"
+    android:layout_height="270dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.430"
+    tools:layout_editor_absoluteX="0dp"
+    tools:ignore="MissingConstraints" />
+
+<EditText
+    android:id="@+id/edit_usuario"
+    style="@style/Edit_Text"
+    android:hint="Usuário"
+    app:layout_constraintStart_toStartOf="@+id/containerComponents"
+    app:layout_constraintTop_toTopOf="@id/containerComponents"
+    />
+<EditText
+    android:id="@+id/edit_senha"
+    style="@style/Edit_Text"
+    android:hint="Senha"
+    app:layout_constraintStart_toStartOf="@+id/containerComponents"
+    app:layout_constraintTop_toBottomOf="@id/edit_usuario"
+    android:drawableRight="@drawable/ic_eye"
+    />
+
+<androidx.appcompat.widget.AppCompatButton
+    style="@style/Button"
+    android:text="@string/entrar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/edit_senha"
+    />
+
+<ProgressBar
+    android:id="@+id/progressbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/containerComponents"
+    />
+
+<TextView
+    android:id="@+id/text_tela_cadastro"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"    
+    android:text="@string/text_cadastro"
+    app:layout_constraintTop_toBottomOf="@id/progressbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="30dp"
+    />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
